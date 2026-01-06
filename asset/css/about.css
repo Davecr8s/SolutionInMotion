@@ -1,0 +1,274 @@
+
+.about--header {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.589),
+        rgba(0, 0, 0, 0.801)
+        ),url(../image/partnership.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about-inner-content{ 
+    position: absolute;
+    color: var(--secondary-color);
+    width: 100%;  
+    margin: 0;
+    /* top: 50%;
+    left: 50%; */
+    /* -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+}
+ 
+
+.about--header--hero h1 {
+    margin-left: 20px !important;
+}
+
+.section--about {
+    padding: 2em 0 0 0;
+}
+
+.section--about--content {
+    max-width: 400px;
+    padding: 2em 1em;
+}
+
+.section--about img {
+    width: 100%;
+}
+
+.section--about--img {
+    width: 100%;
+}
+
+.section--solutions {
+    background: rgb(0, 0, 0);
+    color: var(--secondary-color);
+}
+
+.section--solutions--card--bullet {
+    min-width: 20px;
+    max-width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgb(155, 2, 2);
+}
+
+.section--team--member {
+    position: relative;
+    background: var(--grey-color-1);
+    width: 260px;
+    height: 350px;
+    margin: 0.5em 0;
+    overflow: hidden;
+}
+
+.section--team--member img {
+    width: 100%;
+    height: 100%;
+}
+
+.team--member--name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.team--member--name span{
+    font-size: .88rem !important;
+    font-weight: 300;
+}
+  .second--level--subheading{
+     width:700px;
+    margin:auto;
+    }
+@media only screen and (min-width: 750px) {
+    .section--about--img {
+        width: 370px;
+    }
+
+    .section--about--content {
+        max-width: 500px;
+        padding: 2em;
+    }
+
+    .section--about {
+        margin: 3em 0 5em 0;
+    }
+
+    .section--team--member {
+        margin: 0.5em;
+    }
+  
+   
+}
+
+@media only screen and (min-width: 1100px) {
+    .first--level--heading {
+        font-size: 3rem;
+    }
+
+    .section--about--img {
+        width: 573px;
+        height: 403px;
+    }
+
+    .section--about--content {
+        max-width: 700px;
+        height: 432px;
+        padding: 2em 4em 2em 7em;
+        margin-left: -8em;
+        margin-top: 6em;
+    }
+
+    .section--about--content-right {  
+        margin-right: -8em; 
+        z-index: 0;
+    }
+
+    .section--about--cta{
+        z-index: 0;
+    }
+
+    /* .header--mobile--menu {
+        display: none;
+    } */
+
+    /* .header--navbar--links {
+        display: flex;
+        align-items: center;
+    } */
+
+    .about-content{
+        padding: 6px; 
+        transition: all .5s ease-in-out;
+     }
+
+    .about-content:hover{
+        margin-left: -50px;
+        margin-top: -40px;
+        box-shadow: 0px 20px 70px 0px rgb(0 0 0 / 10%);
+        padding: 20px 50px;
+        /* position: absolute; */
+    }
+
+    .about-content-img{ 
+        position: relative; 
+        width: 100%;
+        z-index: 0;
+    }
+    .about-sec2{
+        position: relative;
+        z-index: 0;
+    }
+    .about-content-left{ 
+        padding: 18px; 
+        transition: all .5s ease-in-out;
+        z-index: 99;
+        font-size: .98rem;
+    }
+
+    .about-content-left:hover{  
+        transform: scale(1.1); 
+        box-shadow: 0px 20px 70px 0px rgb(0 0 0 / 10%);
+        /* padding: 10px 30px;  */
+        position: absolute;
+        z-index: 1;
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+
+@media (min-width: 1100px) {
+    .about-heading-section{
+        height: 95vh;
+        background-image:  linear-gradient( to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.482) ),url(./../image/our-management.jpeg);
+        background-size: 100%;
+    }
+    .about-heading-section .ah--heading{
+        color: rgb(255, 255, 255);
+        font-size: 3rem;
+        padding-top: 50px;
+    }
+    .about-heading-section p{
+        color: rgb(220, 219, 219);
+        font-size: .9rem;
+    }
+}
+
+ @media (max-width: 1100px) {
+    .about-heading-section{
+        height: 100%;
+        background-image:  linear-gradient( to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.482) ),url(./../image/our-management.jpeg);
+        background-size: cover;
+        padding-top:150px;
+        padding-bottom:50px
+        
+    }
+    .about-heading-section .ah--heading{
+        color: rgb(255, 255, 255);
+        font-size: 3rem;
+    }
+    .about-heading-section p{
+        color: rgb(220, 219, 219);
+        font-size: .9rem;
+    }
+ }
+
+.about-management-section{
+    height: 80vh;
+    background-image:  linear-gradient( to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.482) ),url(./../image/our-management.jpeg);
+    background-size: 100%;
+}
+.about-management-section .am--heading{
+    color: rgb(255, 255, 255);
+    font-size: 4rem;
+}
+.about-management-section p{
+    color: rgb(220, 219, 219);
+    font-size: .9rem;
+}
+
+
+
+
+
+.capability-section .container-inner .card{
+    height: 200px;
+    margin-top: 18px; 
+  }
+ 
+.capability-section .card:hover{
+  box-shadow: 5px 5px 5px 5px #eee;
+  cursor: pointer;
+  background-color: rgb(226, 42, 1);
+}
+  .card-lone h6{
+   font-size: 1rem !important;
+   font-weight: 500 !important;
+  }
+
+
+
+@media only screen and (max-width: 1100px) {
+    .capability-section .card-lone{
+        height: 100%;
+        margin-top: 18px;
+    }
+}
+@media only screen and (min-width: 1100px) {
+    .capability-section .card-lone{
+        height: 420px;
+        margin-top: 18px;
+    }
+}

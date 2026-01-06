@@ -1,0 +1,44 @@
+.team-profile .card {
+    transition: 0.3s all ease-in;
+    position: relative;
+    z-index: 1;
+    filter: grayscale(100%);
+    opacity: 0.9;
+  }
+
+@media (max-width:800px) { 
+  .team-profile .card-body .team-name h3{
+    padding-top: 10px;
+    color: #000000 !important
+  }
+}
+@media (min-width:800px) { 
+  .team-profile .card:hover {
+    transform: scale(1.2);
+    z-index: 2;
+    filter: grayscale(0);
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .team-profile .card-body .team-name {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    background-color: rgba(47, 47, 47, 0.701);
+    padding: 8px;
+    font: 400 12px/1 arial;
+    opacity: 0;
+    transition: 0.3s all ease-in; 
+    overflow: hidden;
+    border-top: 1px solid rgba(0, 0, 0, 0); 
+  }
+
+  .team-profile .card:hover .team-name  {
+    opacity: 1;
+    height: 70px;
+    bottom: 3px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2); 
+  }
+}

@@ -1,0 +1,38 @@
+.contact-card-gride .gride-item{
+   width:100px;
+   height:100px;
+   background-color: rgb(196, 16, 0)
+}
+.contact-card-gride .gride-item-outter{
+    width:110px;
+    height:110px;
+    background-color: rgba(254, 22, 1, 0.513); 
+ }
+
+ .contact-form .form-input{
+    margin-top: 20px;
+  } 
+
+  .contact-form .form-control{
+    height: 50px;
+    margin-top: 7px;
+  }
+
+  .contact-form .form-control:focus{
+    outline: none !important;
+    box-shadow: none !important;
+    border: 1px solid rgb(114, 0, 0);
+  }
+  .contact-form textarea{
+     height: 150px !important;
+   }
+
+ .contact-form .btn{
+     padding: 10px;
+     width: 150px;
+     height: 50px;
+     background-color: rgb(196, 16, 0);
+     font-weight: bolder;
+     color:aliceblue;
+     font-size:9
+  }
