@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>  
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#ffb536"/>
+
+        <link rel="icon" type="image/x-icon" href="asset/image/favicon.ico">
+
+        <link href="asset/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="asset/css/style.css"> 
+        <link rel="stylesheet" href="asset/aos-master/dist/aos.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function(){
+          // make it as accordion for smaller screens
+          if (window.innerWidth < 992) {
+
+            // close all inner dropdowns when parent is closed
+            document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
+              everydropdown.addEventListener('hidden.bs.dropdown', function () {
+                // after dropdown is hidden, then find all submenus
+                  this.querySelectorAll('.submenu').forEach(function(everysubmenu){
+                    // hide every submenu as well
+                    everysubmenu.style.display = 'none';
+                  });
+              })
+            });
+
+            document.querySelectorAll('.dropdown-menu a').forEach(function(element){
+              element.addEventListener('click', function (e) {
+                  let nextEl = this.nextElementSibling;
+                  if(nextEl && nextEl.classList.contains('submenu')) {	
+                    // prevent opening link if link needs to open dropdown
+                    e.preventDefault();
+                    if(nextEl.style.display == 'block'){
+                      nextEl.style.display = 'none';
+                    } else {
+                      nextEl.style.display = 'block';
+                    }
+
+                  }
+              });
+            })
+          }
+          // end if innerWidth
+          }); 
+          // DOMContentLoaded  end
+        </script>
+ 
+    </head>
+    <body>
+        <header>  
+
+            <nav class="navbar bg-white navbar-expand-lg fixed-top shadow-sm py-1">
+                <div class="container-xl">
+                  <a class="navbar-brand" href="index.html"  data-aos="fade-up"
+                  data-aos-anchor-placement="bottom-bottom">
+                    <!-- <img src="asset/image/sim-logo.png" alt="" class="w-50"></a> -->
+                    <img src="asset/image/sim-logo.png" alt="" class="w-50"></a>
+                  <button class="navbar-toggler shadow" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  
+                  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                        
+                          <a class="navbar-brand" href="#"  data-aos="fade-up"
+                          data-aos-anchor-placement="bottom-bottom">
+                            <img src="asset/image/logo.png" alt="" class="w-50">
+                          </a>
+
+                      </h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>   
+                        <li class="nav-item dropdown" id="myDropdown">
+                          <a class="nav-link dropdown-toggle" href="about.html" id="navbarDropdown" data-bs-auto-close="false" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            About SIM Group
+                          </a>
+                          <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarDropdown">   
+                            <li class="dropdown-submenu">
+                                <a href="#" class="dropdown-item dropdown-toggle" data-bs-auto-close="false" data-toggle="dropdown" role="button"  aria-expanded="false">Solution in Motion INC.</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="aeronautical-world-support.html"  class="dropdown-item">Aircraft Maintenance <!--& Inventory Management--></a></li>
+                                    <li><a href="port-consulting.html"  class="dropdown-item">3D Seaport Services</a></li>
+                                    <li class="dropdown-submenu"> 
+                                        <a href="#" class="dropdown-toggle dropdown-item" data-toggle="dropdown"  role="button"  aria-expanded="false">Technology</a>
+                                        <ul class="dropdown-menu dropdown-menu"> 
+                                          <li><a href="software-group.html" class="dropdown-item">Software Distributor</a></li>
+                                          <li><a href="software-reseller.html" class="dropdown-item">Software Reseller</a></li>
+                                          <li><a href="solar-technology.html" class="dropdown-item">Solar Technology Solutions</a></li>  
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li> 
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="solution-in-motion-limited.html">Solution in Motion Limited</a></li> 
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="about.html">Our Corporate profile</a></li> 
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="our_team.html">Our Team</a></li> 
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="specialty.html">Our Specialty</a></li> 
+                            <li><hr class="dropdown-divider"></li>
+                            
+                          </ul>
+                        </li> 
+                        <li class="nav-item">
+                          <a class="nav-link" href="services.html">Our Services</a>
+                        </li> 
+                        <li class="nav-item">
+                          <a class="nav-link" href="partners.html">Partners & Clients</a>
+                        </li> 
+                        <li class="nav-item">
+                          <a class="nav-link" href="media.html">Media</a>
+                        </li>  
+                        <li class="nav-item">
+                          <a class="nav-link" href="contactus.html"><button class="btn btn-warning px-3 rounded-0 fw-bolder">Contact Us</button></a>
+                        </li> 
+                      </ul> 
+                    </div>
+                  </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="pt-4 mt-2">
+              <div id="carouselExampleCaptions" class="carousel fade-carousel slide" data-interval="80" id="bs-carousel"  data-bs-ride="carousel">
+                 
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="overlay"></div>
+                    <img src="./asset/image/software_security.jpeg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-block d-md-block">
+                      <h5 data-aos="fade-up">Technology Interchange</h5>
+                      <p data-aos="fade-up">Delivering cutting-edge technology solutions & Advanced Threat Protection.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="overlay"></div>
+                    <img src="./asset/image/software_distribution.jpeg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-block d-md-block">
+                      <h5 data-aos="fade-up">Software Distributor</h5>
+                      <p data-aos="fade-up">Value-Added distributor of Best-of-Breed, Best-In-Class software solutions across Africa.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="overlay"></div>
+                    <img src="./asset/image/slider11.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-block d-md-block">
+                      <h5 data-aos="fade-up">3D Seaport SERVICES</h5>
+                      <p data-aos="fade-up">Intermodal and logistics, terminal operating systems, port management.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="overlay"></div>
+                    <img src="./asset/image/aircraft.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-block d-md-block">
+                      <h5 data-aos="fade-up" class="d-md-none">Aircraft Maintenance</h5>
+                      <h5 data-aos="fade-up" class="d-none d-md-block">Aircraft Maintenance & Inventory Management</h5>
+                      <p data-aos="fade-up">Best-of breed maintenance software solutions, Inventory management and tools.</p>
+                    </div>
+                  </div> 
+                  <!-- <div class="carousel-item">
+                    <div class="overlay"></div>
+                    <img src="./asset/image/slider113.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-block d-md-block">
+                      <h5 data-aos="fade-up">Financial Solutions</h5>
+                      <p data-aos="fade-up">Providing solutions to a range of players in the financial sector.</p>
+                    </div>
+                  </div> 
+                  <div class="carousel-item">
+                    <div class="overlay"></div>
+                    <img src="./asset/image/slider115.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-block d-md-block">
+                      <h5 data-aos="fade-up">Software Group</h5>
+                      <p>Providing Institutions with Innovative Software Solutions.</p>
+                    </div>
+                  </div>   -->
+                </div> 
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </section>
+
+
+
+            <!-- data-aos="fade-up" data-aos-duration="3000" -->
+             <section>
+                <div class="simi-intro">
+                  <div class="container h-100">
+                      <div class="row h-100 justify-content-center">
+                        <div class="col-md-4 p-md-0" >
+                           <div class="card border-0 simi-intro-card">
+                              <div class="card-body p-sm-5">
+                                <img src="./asset/image/diversity.png" alt="" class="simi-intro-card-icon dance_hover mb-4">
+                                  <h2 class="simi-intro-card-title fw-bolder">
+                                    Diversity 	 
+                                  </h2>
+                                  <div class="simi-intro-card-desc">
+                                    SIM has grown from strength to strength and continues to strive in improving itself by growing our company and assets through knowledge and skills development.
+                                  </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-4 p-md-0"> 
+                          <div class="card border-0 simi-intro-card simi-intro-card-mid">
+                            <div class="card-body p-sm-5">
+                              <img src="./asset/image/2.png" alt="" class="simi-intro-card-icon dance_hover mb-4">
+                              <h2 class="simi-intro-card-title fw-bolder">
+                                Respect
+                              </h2>
+                              <div class="simi-intro-card-desc">
+                                SIM prides itself on delivering products and services which adhere to the principles of quality, transparency and affordability.
+                              </div>
+                            </div>
+                         </div>
+                        </div>
+                        <div class="col-md-4 p-md-0"> 
+                          <div class="card border-0 simi-intro-card">
+                            <div class="card-body p-sm-5">
+                              <img src="./asset/image/display1.png" alt="" class="simi-intro-card-icon dance_hover mb-4">
+                              <h2 class="simi-intro-card-title fw-bolder">
+                                Transparency
+                              </h2>
+                              <div class="simi-intro-card-desc">
+                                SIM is specialized Technology consulting company focused on end-to-end solutions for the financial sector
+                              </div>
+                            </div>
+                         </div>
+                        </div>
+                      </div>
+                  </div> 
+                </div>
+             </section>
+
+            <section class="bg-light shadow-sm">   
+                <div class="container-fluid px-0"> 
+                  <div class="marquee shadow">
+                    <div class="marquee__item">
+                      Our flagship solution, Venafi Trust protection platform a SSL Certificate management and PKI automation solution is live at Zenith Bank Nigeria 
+                      <span class="marquee__seperator">+++</span>
+                      Oando Plc Nigeria adopt Solution In Motion limited SSL Certificates security solution
+                      <span class="marquee__seperator">+++</span>
+                      Solution In Motion limited SSL Certificates security solution customized to your specific security needs
+                      <span class="marquee__seperator">+++</span>
+                      OandO Plc Nigeria adopt Solution In Motion limited SSL Certificates security solution
+                      <span class="marquee__seperator">+++</span>
+                      Solution In Motion limited SSL Certificates security solution customized to your specific security needs
+                      <span class="marquee__seperator">+++</span> 
+                      Our flagship solution, Venafi Trust protection platform a SSL Certificate management and PKI automation solution is live at Zenith Bank Nigeria 
+                      <span class="marquee__seperator">+++</span> 
+                    </div> 
+                  </div>
+              </div>
+            </section>
+             <section>
+              <div class="about">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="container-fluid">
+                        <div class="row">
+                          <div class="col-6 col-md-6 p-0" 
+                          data-aos="fade-zoom-in"
+                          data-aos-easing="ease-in-back"
+                          data-aos-delay="90"
+                          data-aos-offset="0"> 
+                            <img src="asset/image/about-bg-lg.jpg" class="w-100 rounded">
+                            <!-- <div class="about-img home3-full text-center">
+                              <img src="./asset/image/sim_about.png" alt="About" class="w-100">
+                            </div> -->
+                          </div>
+                          <div class="col-6 col-md-6">
+                            <div class="container-fluid">
+                              <div class="row"> 
+                                <div class="col-12 col-md-12 pb-sm-3"
+                                  data-aos="fade-zoom-in"
+                                  data-aos-easing="ease-in-back"
+                                  data-aos-delay="200"
+                                  data-aos-offset="0"> 
+                                  <img src="asset/image/blog22.png" class="w-100 rounded">
+                                </div>
+                                <div class="col-12 col-md-12 pt-sm-3"
+                                  data-aos="fade-zoom-in"
+                                  data-aos-easing="ease-in-back"
+                                  data-aos-delay="300"
+                                  data-aos-offset="0">  
+                                  <img src="asset/image/about5.png" class="w-100 mt-4 mt-md-2 rounded">
+                                </div>
+                              </div> 
+                            </div> 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <span class="sub-text my-4 ">About Us</span>
+                       <h2 class="mb-4">What We Are About - SIM</h2>
+                       <p>
+                        Solution In Motion (SIM) is a multi-competency enterprise transformation and technology-consulting firm that combines expertise and capabilities across many industries and business functions to deliver superior value to its clients. We collaborate with our clients, both in the private and public sectors, to build high performance enterprises.
+                       </p> 
+                       <!-- <p>Our principals and directors have a combined industry experience of over 40 years in various sectors of the economy...</p> -->
+                        <div class="row">
+                          <div class="col-sm-5">
+                            <ul class="check-lists">
+                              <li data-aos="fade-up">3D Seaport Service</li>
+                              <li data-aos="fade-up">Software Distributor</li>
+                              <li data-aos="zoom-in-down">Software Security Solution</li>
+                            </ul>
+                          </div>
+                          <div class="col-sm-7">
+                            <ul class="check-lists">
+                              <li data-aos="fade-up">Software Reseller</li>
+                              <li data-aos="fade-up">Solar Technology</li>
+                              <li data-aos="fade-up">Aircraft Maintenance & Inventory Management</li>
+                            </ul>
+                          </div> 
+                       </div>
+                       <div class="btn-part mt-4">
+                        <a   data-aos="zoom-in-down" href="about.html">
+                          <button class="btn read-more rounded-0"> Read More</button>
+                         </a>
+                       </div> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+             </section>
+
+             <section>
+                <div class="service bg-light">
+                   <div class="container">
+                    <div class="service-title mb-5" data-aos="zoom-in-down"> 
+                      <div class="sec-title text-center mb-5">
+                        <span class="sub-title">Valued Services</span>
+                        <h2 class="title ">
+                            Our Services and Expert Offers
+                        </h2>
+                        <div class="heading-border-line mt-4 mb-5"></div>
+                    </div>
+                    </div>
+                    <div class="row mt-5 pt-5">
+                      <div class="col-lg-4 col-md-6 mb-50">
+                        <a href="aeronautical-world-support.html"></a>
+                        <div class="services-item mb-5" data-aos="zoom-in-down">
+                            <div class="services-icon">
+                                <img src="./asset/image/aeroplan_globe.png" alt="Services">
+                            </div>
+                            <div class="services-text">
+                                <h2 class="title"><a href="aeronautical-world-support.html">Aircraft Maintenance & Inventory Management</a></h2>
+                                <p class="services-txt">Support the aeronautical world with the best-of breed maintenance software solutions...</p>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6 mb-50 my-auto">
+                        <a href="port-consulting.html">
+                        <div class="services-item mb-5" data-aos="zoom-in-down">
+                            <div class="services-icon">
+                              <img src="./asset/image/shipping.png" alt="Services">
+                            </div>
+                            <div class="services-text">
+                                <h2 class="title"><a href="port-consulting.html">3D Seaport Service</a></h2>
+                                <p class="services-txt">Services (through our partners conduct intermodal and logistics, terminal operating systems...</p>
+                            </div>
+                        </div>
+                      </a>
+                      </div>
+                      <div class="col-lg-4 col-md-6 mb-50 my-auto">
+                        <a href="software-group.html">
+                          <div class="services-item mb-5" data-aos="zoom-in-down">
+                              <div class="services-icon"> 
+                                <img src="./asset/image/software.png" alt="Services" class="">
+                              </div>
+                              <div class="services-text">
+                                  <h2 class="title"><a href="software-group.html">Software Distributor</a></h2>
+                                  <p class="services-txt">We are a Value-Added distributor of Best-of-Breed, Best-In-Class software solutions used by Professionals...</p>
+                              </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-lg-4 col-md-6 mb-50"> 
+                        <a href="software-security.html">
+                          <div class="services-item mb-5" data-aos="zoom-in-down">
+                              <div class="services-icon">
+                                <img src="./asset/image/secure-data.png" alt="Services">
+                              </div>
+                              <div class="services-text">
+                                  <h2 class="title"><a href="software-security.html">Software Security Solution</a></h2> 
+                                  <p class="services-txt">We are committed to delivering cutting-edge technology solutions majoring in these verticals; Enterprise Application... </p>
+                              </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-lg-4 col-md-6 mb-50">
+                        <a href="software-reseller.html">
+                          <div class="services-item mb-5" data-aos="zoom-in-down">
+                              <div class="services-icon">
+                                <img src="./asset/image/business_1.png" alt="Services">
+                              </div>
+                              <div class="services-text">
+                                  <h2 class="title"><a href="software-reseller.html">Software Reseller</a></h2>
+                                  <p class="services-txt">Providing innovative software solutions for enterprise development and business solutions across sectors.</p>
+                              </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-lg-4 col-md-6 mb-50">
+                        <a href="solar-technology.html">
+                          <div class="services-item mb-5" data-aos="zoom-in-down">
+                              <div class="services-icon">
+                                <img src="./asset/image/solar-cell.png" alt="Services" class="">
+                              </div>
+                              <div class="services-text">
+                                  <h2 class="title"><a href="solar-technology.html">Solar Technology</a></h2> 
+                                  <p class="services-txt">Our World class solar solutions are designed to innovatively answer the power, efficiency and Sustainability questions. </p>
+
+                              </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                   </div>
+                </div>
+             </section>
+
+
+             <section>
+              <div class="blog"> 
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="card border border-light" data-aos="fade-up" data-aos-duration="1000">
+                        <img src="asset/image/blog5.png">
+                        <div class="card-body">
+                          <ul class="blog-meta">
+                            <li class="date"><i class="fas fa-calendar"></i> 26 August 2022</li>
+                            <li class="admin"><i class="fas fa-user"></i> Admin</li>
+                          </ul>
+                          <h3 class="blog-title"><a href="facts-about-our-aeronautical-service.html">Facts about our aeronautical service</a></h3>
+                          <p class="desc">The brand has responded by partnering with skincare experts on social and web...</p> 
+                          <div class="blog-button">
+			                    	<a href="facts-about-our-aeronautical-service.html">
+                              <span class="btn-text">
+                                Read More                           
+                              </span>
+                              <i class="fas fa-arrow-right"></i>
+                            </a> 
+			                    </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4"> 
+                      <div class="card border border-light" data-aos="fade-up" data-aos-duration="2000">
+                        <img src="asset/image/blog4.jpg">
+                        <div class="card-body"> 
+                          <ul class="blog-meta">
+                            <li class="date"><i class="fas fa-calendar"></i> 26 August 2022</li>
+                            <li class="admin"><i class="fas fa-user"></i> Admin</li>
+                          </ul>
+                          <h3 class="blog-title"><a href="port-hike-up-and-other-netigrities.html">Port hike-up and other netigrities</a></h3>
+                          <p class="desc">The brand has responded by partnering with skincare experts on social and web...</p>
+                          <div class="blog-button">
+			                    	<a href="port-hike-up-and-other-netigrities.html">
+                              <span class="btn-text">
+                                Read More                           
+                              </span>
+                              <i class="fas fa-arrow-right"></i>
+                            </a> 
+			                    </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4"> 
+                      <div class="card border border-light" data-aos="fade-up" data-aos-duration="3000">
+                        <img src="asset/image/software-geeky.jpeg">
+                        <div class="card-body">
+                          <ul class="blog-meta">
+                            <li class="date"><i class="fas fa-calendar"></i> 26 August 2022</li>
+                            <li class="admin"><i class="fas fa-user"></i> Admin</li>
+                          </ul>
+                          <h3 class="blog-title"><a href="plug-and-play-financial-solutions.html">Plug and play financial solutions</a></h3>
+                          <p class="desc">Startups in the fintech sector have significantly increased innovation in the financial services sector.</p>
+                          <div class="blog-button">
+			                    	<a href="plug-and-play-financial-solutions.html">
+                              <span class="btn-text">
+                                Read More                           
+                              </span>
+                              <i class="fas fa-arrow-right"></i>
+                            </a> 
+			                    </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+           
+
+            <!-- <section class="py-5 newslider d-none bg-light shadow-sm">   
+                <div class="container-fluid"> 
+                  <div class="news-slider ">
+                    <div class=" slide-track">
+                    <div class="slide">
+                      <div class="card shadow-sm border mt-2" data-aos="fade-top">
+                        <div class="card-body h-100 d-flex justify-content-center align-items-center">
+                          Our flagship solution, Venafi Trust protection platform a SSL Certificate management and PKI automation solution is live at Zenith Bank Nigeria 
+                        </div>
+                      </div>
+                    </div>
+      
+                    <div class="slide">
+                      <div class="card shadow-sm border mt-2" data-aos="fade-top">
+                        <div class="card-body h-100 d-flex justify-content-center align-items-center">
+                          OandO Plc Nigeria adopt Solution In Motion limited SSL Certificates security solution
+                        </div>
+                      </div>
+                    </div>
+      
+                    <div class="slide">
+                      <div class="card shadow-sm border mt-2" data-aos="fade-top">
+                        <div class="card-body h-100 d-flex justify-content-center align-items-center">
+                          Solution In Motion limited SSL Certificates security solution customized to your specific security needs
+                        </div>
+                      </div>
+                    </div>
+                   </div>
+                  </div>
+                  </div>
+                </section>
+
+
+                <section class="py-5 newslider d-none  bg-light shadow-sm">   
+                    <div class="container-fluid"> 
+                   <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                         <div class="row">
+                          <div class="col-md-4">
+                            <div class="card shadow-sm border mt-2" data-aos="fade-top">
+                              <div class="card-body h-100 d-flex justify-content-center align-items-center">
+                                Our flagship solution, Venafi Trust protection platform a SSL Certificate management and PKI automation solution is live at Zenith Bank Nigeria 
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-md-4  d-none d-md-block">
+                            <div class="card shadow-sm border mt-2" data-aos="fade-top">
+                              <div class="card-body h-100 d-flex justify-content-center align-items-center">
+                                OandO Plc Nigeria adopt Solution In Motion limited SSL Certificates security solution
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-md-4  d-none d-md-block">
+                            <div class="card shadow-sm border mt-2" data-aos="fade-top">
+                              <div class="card-body h-100 d-flex justify-content-center align-items-center">
+                                Solution In Motion limited SSL Certificates security solution customized to your specific security needs
+                              </div>
+                            </div>
+                          </div>
+                         </div>
+                      </div>
+                      <div class="carousel-item"> 
+                        <div class="row">
+                          <div class="col-md-4  d-none d-md-block">
+                            <div class="card shadow-sm border mt-2" data-aos="fade-top">
+                              <div class="card-body h-100 d-flex justify-content-center align-items-center">
+                                Solution In Motion limited SSL Certificates security solution customized to your specific security needs
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="card shadow-sm border mt-2" data-aos="fade-top">
+                              <div class="card-body h-100 d-flex justify-content-center align-items-center">
+                                OandO Plc Nigeria adopt Solution In Motion limited SSL Certificates security solution
+                              </div>
+                            </div>
+                          </div> 
+                          <div class="col-md-4  d-none d-md-block">
+                            <div class="card shadow-sm border mt-2" data-aos="fade-top">
+                              <div class="card-body h-100 d-flex justify-content-center align-items-center">
+                                Solution In Motion limited SSL Certificates security solution customized to your specific security needs
+                              </div>
+                            </div>
+                          </div>
+                         </div>
+                      </div>
+                      <div class="carousel-item"> 
+                        <div class="row">
+                          <div class="col-md-4 d-none d-md-block">
+                            <div class="card shadow-sm border mt-2" data-aos="fade-top">
+                              <div class="card-body h-100 d-flex justify-content-center align-items-center">
+                                Solution In Motion limited SSL Certificates security solution customized to your specific security needs
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4  d-none d-md-block">
+                            <div class="card shadow-sm border mt-2" data-aos="fade-top">
+                              <div class="card-body h-100 d-flex justify-content-center align-items-center">
+                                OandO Plc Nigeria adopt Solution In Motion limited SSL Certificates security solution
+                              </div>
+                            </div>
+                          </div> 
+                          <div class="col-md-4">
+                            <div class="card shadow-sm border mt-2" data-aos="fade-top">
+                              <div class="card-body h-100 d-flex justify-content-center align-items-center">
+                                Solution In Motion limited SSL Certificates security solution customized to your specific security needs
+                              </div>
+                            </div>
+                          </div>
+                         </div>
+                      </div>
+                    </div>
+                  </div>  
+              </div>
+            </section> -->
+        </main>
+
+        <footer> 
+          <div class="container py-5">
+            <div class="row justify-content-center">
+              <div class="col-12 col-sm-3"> 
+               <div class="footer-widget"> 
+                   <img src="./asset/image/Footer-Mainlogo.png" class="w-75">
+                  <div class="widget-content">
+                    SIM prides itself on delivering products and services which adhere to the principles of quality, transparency and affordability.
+                    <div class="widget-social"> 
+                        <ul class="mt-4 p-0 m-0">
+                          <li class="nav-item">
+                            <a class="nav-link mx-1 active" aria-current="page" href="#">
+                              <i class="fab fa-facebook"></i> facebook
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link mx-1" href="#">
+                              <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link mx-1" href="#">
+                              <i class="fab fa-twitter"></i> Twitter
+                            </a>
+                          </li>
+                        </ul> 
+                    </div>
+                  </div>
+               </div>
+              </div>
+              <div class="col-12 col-sm-3"> 
+               <div class="footer-widget footer-contact mt-4"> 
+                  <h5>Our Contact</h5>   
+
+                  <div class="row mt-4">
+                    <div class="col-1">
+                      <i class="fas fa-map-marker-alt text-light"></i> 
+                    </div>
+                    <div class="col-11 addes text-light">
+                      4,  Carmicheal Court Cartonsville, MD 21228, USA.
+                    </div>
+                  </div>
+
+                  <div class="row mt-4">
+                    <div class="col-1">
+                      <i class="fas fa-map-marker-alt text-light"></i> 
+                    </div>
+                    <div class="col-11 addes text-light">
+                      Suit 2, 2nd Floor Middle Lane, Plot 43, Nurses Towers, ChurchGate Street Victoria Island,  Lagos. Nigeria
+                    </div>
+                  </div>
+
+
+                  <div class="row mt-3">
+                    <div class="col-1">
+                      <i class="fas fa-phone  text-light"></i>
+                    </div>
+                    <div class="col-11">
+                      <div class="desc text-light"> 
+                        <a href="tel:(+234)8099556387" class="addes">(+234) 809 955 6387</a><br> 
+                        <a href="tel:+1 240 838 6187" class="addes">+1 240 838 6187</a><br>  
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="row mt-3">
+                    <div class="col-1">
+                      <i class="fas fa-envelope text-light"></i>
+                    </div>
+                    <div class="col-11 text-light">
+                      <div class="desc">
+                        <a href="mailto:info@solutioninmotiongroup.com" class="addes">info@solutioninmotiongroup.com</a><br> 
+                    </div>
+                    </div>
+                  </div> 
+               </div>
+
+
+            
+              </div>
+              <div class="col-12 col-sm-3"> 
+                <div class="footer-widget mt-4">
+                  <h5>Our Services</h5>
+                  <ul class="list-unstyled quick-links mt-4">
+                    <li><a href="aeronautical-world-support.html"><i class="fa fa-angle-double-right me-2"></i>Aircraft Maintenance</a></li>
+                    <li><a href="port-consulting.html"><i class="fa fa-angle-double-right me-2"></i>3D Sea Port Service</a></li>
+                    <li><a href="software-group.html"><i class="fa fa-angle-double-right me-2"></i>Software Distributor</a></li>
+                    <li><a href="software-security.html"><i class="fa fa-angle-double-right me-2"></i>Software Security Solution</a></li>
+                    <li><a href="software-reseller.html"><i class="fa fa-angle-double-right me-2"></i>Software Reseller</a></li>
+                    <li><a href="solar-technology.html"><i class="fa fa-angle-double-right me-2"></i>Solar Technology</a></li>
+                  </ul>
+                </div>
+                </div> 
+              <div class="col-12 col-sm-3"> 
+                <div class="footer-widget mt-4">
+                  <h5>Quick Links</h5>
+                    <ul class="list-unstyled quick-links mt-4"> 
+                      <li><a href="solution-in-motion-limited.html"><i class="fa fa-angle-double-right me-2"></i>About SIM Limited</a></li>
+                      <li><a href="services.html"><i class="fa fa-angle-double-right me-2"></i>Our services</a></li>
+                      <li><a href="media.html"><i class="fa fa-angle-double-right me-2"></i>Media</a></li>
+                      <li><a href="specialty.html"><i class="fa fa-angle-double-right me-2"></i>Our Specialty</a></li>
+                      <li><a href="contactus.html"><i class="fa fa-angle-double-right me-2"></i>Contact us</a></li>
+                    </ul>
+                </div> 
+            </div>
+          </div>
+        </div>
+
+        <div class="copyright text-center py-sm-4">
+          <div class="copyright-center">&copy; 2022 Solution in Motion Group - All right reserved.</div>
+        </div>
+        </footer> 
+        
+        <script src="asset/js/bootstrap/js/popper.js"></script>
+        <script src="asset/js/bootstrap/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+        <script src="asset/js/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js" integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="asset/aos-master/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
+</html>
